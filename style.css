@@ -1,0 +1,160 @@
+    /* Importar tipografías con estilo artesanal y legible */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Variables de color temáticas */
+:root {
+    --color-fondo: #FAF7F2;          /* Tono lino / hueso */
+    --color-tarjeta: #FFFFFF;        /* Blanco limpio para tarjetas */
+    --color-superficie: #EFE8DD;    /* Tono arcilla suave */
+    --color-texto: #3E2723;          /* Café madera oscuro para lectura */
+    --color-texto-suave: #6C584C;    /* Café intermedio para subtítulos */
+    --color-terracota: #C85A32;      /* Barro cocido / terracota */
+    --color-terracota-hover: #A74520;
+    --color-oliva: #606C38;          /* Verde artesanal / botánico */
+    --color-ocre: #DDA15E;           /* Acento mostaza/ocre */
+    --borde-suave: #DDD3C4;          /* Líneas discretas */
+    
+    --fuente-titulos: 'Lora', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+}
+
+/* Encabezados y tipografía */
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+/* Barra de navegación */
+header {
+    background-color: var(--color-fondo);
+    border-bottom: 2px solid var(--borde-suave);
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-terracota);
+    letter-spacing: 0.5px;
+}
+
+nav a {
+    color: var(--color-texto-suave);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--color-terracota);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Botones artesanales */
+.btn-artesanal {
+    display: inline-block;
+    background-color: var(--color-terracota);
+    color: #FFFFFF;
+    padding: 0.75rem 1.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(200, 90, 50, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-artesanal:hover {
+    background-color: var(--color-terracota-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(200, 90, 50, 0.25);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--color-oliva);
+    border: 1.5px solid var(--color-oliva);
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-oliva);
+    color: #FFFFFF;
+}
+
+/* Tarjetas de productos o historias */
+.grid-artesanias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--borde-suave);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(62, 39, 35, 0.08);
+}
+
+.card .etiqueta {
+    display: inline-block;
+    background-color: var(--color-superficie);
+    color: var(--color-oliva);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: var(--color-texto-suave);
+    margin: 0.75rem 0 1.25rem;
+    font-size: 0.95rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-superficie);
+    border-top: 1px solid var(--borde-suave);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+}
